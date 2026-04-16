@@ -11,6 +11,11 @@ ENV_ALIASES: dict[str, tuple[str, ...]] = {
     "GITLAB_URL": ("GitLabUrl", "GLUrl"),
     "GITLAB_PROJECT": ("GitLabProject", "GLProject"),
     "GITLAB_PROJECT_ID": ("GitLabProjectId", "GLProjectId"),
+    "LLM_BASE_URL": ("OLLAMA_HOST", "OpenAIApiBaseUrl", "OPENAI_API_BASE_URL", "OPENWEBUI_API_BASE_URL"),
+    "LLM_MODEL": ("OLLAMA_MODEL", "OpenAIModel", "OPENAI_MODEL", "OPENWEBUI_MODEL"),
+    "LLM_API_KEY": ("OpenAIApiKey", "OPENAI_API_KEY", "OPENWEBUI_API_KEY"),
+    "LLM_API_STYLE": ("OLLAMA_API_STYLE", "OPENAI_API_STYLE", "OPENWEBUI_API_STYLE"),
+    "LLM_PROVIDER_LABEL": ("OPENWEBUI_PROVIDER_LABEL",),
     "OLLAMA_HOST": ("OllamaHost",),
     "OLLAMA_MODEL": ("OllamaModel",),
 }

@@ -181,9 +181,11 @@ def process_issue(
 
     analysis = generate_analysis(
         issue=issue_data,
-        model=get_env("OLLAMA_MODEL", "gemma4:26b") or "gemma4:26b",
-        host=get_env("OLLAMA_HOST", "http://127.0.0.1:11434") or "http://127.0.0.1:11434",
+        model=get_env("LLM_MODEL", "gemma4:26b") or "gemma4:26b",
+        host=get_env("LLM_BASE_URL", "http://127.0.0.1:11434") or "http://127.0.0.1:11434",
         timeout=600,
+        api_style=get_env("LLM_API_STYLE", "ollama") or "ollama",
+        api_key=get_env("LLM_API_KEY"),
     )
     if analysis_path is not None:
         analysis_path.write_text(analysis + "\n", encoding="utf-8")
