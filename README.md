@@ -1,6 +1,6 @@
 # issue_analysis
 
-`uv` と Python 3.14 で管理する小さな CLI ツール集です。
+`uv` と Python 3.14 で管理するCLI ツール集です。
 
 ## セットアップ
 
